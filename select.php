@@ -4,7 +4,7 @@
     // Verifico si los datos del formulario han sido enviados.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Declaro una variable llamada sql en la que hago una consulta select de todos los elementos de la tabla users
-        $select = "SELECT * FROM users";
+        $select = "SELECT * FROM user";
 
         // Declaro una variable datos a la que le paso una funcion que se llama mysqli_query
         // que tendra dos parametros la conexion a la base de datos y la consulta select 

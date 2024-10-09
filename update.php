@@ -8,7 +8,7 @@
         
         // Declaro una variable update a la que le paso una consulta sql para modificar una fila de la tabla
         // En este caso el nombre del id 11.
-        $update = "update users set nombre = '$nombre' where id = $id";
+        $update = "update user set nombre = '$nombre' where id = $id";
 
         // Declaro una variable return a la que le paso una funcion que se llama mysqli_query
         // que tendra dos parametros la conexion a la base de datos y la consulta update

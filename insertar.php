@@ -9,7 +9,7 @@
         $email = $_POST['email'];
 
         // Preparo la consulta SQL para insertar los datos en la tabla 'users'.
-        $insert = "INSERT INTO users (nombre, email) VALUES ('$nombre', '$email')";
+        $insert = "INSERT INTO user (nombre, email) VALUES ('$nombre', '$email')";
 
         // Ejecuto la consulta.
         $return = mysqli_query($con, $insert);
