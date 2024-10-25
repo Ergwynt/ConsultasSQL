@@ -7,9 +7,10 @@
         // Capturo los valores enviados por el formulario.
         $nombre = $_POST['nombre'];
         $email = $_POST['email'];
+        $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
         // Preparo la consulta SQL para insertar los datos en la tabla 'users'.
-        $insert = "INSERT INTO user (nombre, email) VALUES ('$nombre', '$email')";
+        $insert = "INSERT INTO user (nombre, email, pasword) VALUES ('$nombre', '$email','$password')";
 
         // Ejecuto la consulta.
         $return = mysqli_query($con, $insert);

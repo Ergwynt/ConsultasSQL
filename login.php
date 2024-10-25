@@ -5,6 +5,9 @@
         $email = $_POST['email'];
         $password =password_hash($_POST['password'], PASSWORD_BCRYPT);
 
+        $consulta = "SELECT email,pasword FROM user where email = $email";
+        
+
 
     }
 
