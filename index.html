@@ -6,9 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="./form_insert.html">Insertar</a>
-    <a href="./form_select.html">Editar</a>
-    <a href="./form_delete.html">Eliminar</a>
-    <a href="./form_update.html">Modificar</a>
+    <form action="./login.php" method="POST">
+        <label for="Email">Email</label>
+        <input type="text" id="email" name="email" required>
+        <br>
+        <label for="Password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Enviar</button>
+
+
+    </form>
 </body>
 </html>
