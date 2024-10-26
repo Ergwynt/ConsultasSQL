@@ -6,11 +6,16 @@
 //         'ciclon1324', // contraseña
 //         'if0_37567037_prueba' // Nombre de la base de datos
 //     );
+
 $con = mysqli_connect(
-    'localhost', // Aqui se inserta el host
+    'localhost', // Aquí se inserta el host
     'root', // Nombre del usuario
-    '', // contraseña
+    '', // Contraseña
     'prueba' // Nombre de la base de datos
 );
-    $con->set_charset('utf8');
+
+if (!$con) {
+    die("Conexión fallida: " . mysqli_connect_error());
+}
+$con->set_charset('utf8');
 ?>

@@ -1,5 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+// Iniciar la sesión
+session_start();
+
+// Verificar si el usuario ha iniciado sesión
+if (!isset($_SESSION['usuario_id'])) {
+    // Si no hay sesión, redireccionar al login
+    header("Location: ../index.html");
+    exit();
+}
+?>
+<!DOCTYPE php>
+<php lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +29,8 @@
         <input type="password" id="password" name="password" placeholder="Pon una contraseña aqui" required>
         <button type="submit">Enviar</button>
     </form>
-    <button onclick="window.location.href='./form_delete.html';">Eliminar datos</button>
-    <button onclick="window.location.href='./form_select.html';">Ver datos</button>
-    <button onclick="window.location.href='./form_update.html';">Modificar datos</button>
+    <button onclick="window.location.href='./form_delete.php';">Eliminar datos</button>
+    <button onclick="window.location.href='./form_select.php';">Ver datos</button>
+    <button onclick="window.location.href='./form_update.php';">Modificar datos</button>
 </body>
-</html>
+</php>
