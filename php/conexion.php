@@ -11,7 +11,7 @@ $con = mysqli_connect(
     'localhost', // Aquí se inserta el host
     'root', // Nombre del usuario
     '', // Contraseña
-    'prueba' // Nombre de la base de datos
+    'base' // Nombre de la base de datos
 );
 
 if (!$con) {
