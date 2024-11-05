@@ -2,30 +2,31 @@
 
 ## Arquitectura Web de Tres Capas
 
-La arquitectura web de tres capas es un modelo común en el desarrollo de aplicaciones web, que organiza el software en tres capas distintas:
+La arquitectura web de tres capas es un modelo que organiza el software en tres partes principales y se usa mucho en el desarrollo de aplicaciones web:
 
-1. **Capa de Presentación**: Es la interfaz del usuario y se encarga de mostrar los datos y recibir las interacciones del usuario. Suele implementarse en HTML, CSS y JavaScript.
+1. **Capa de Presentación**: Es la interfaz de usuario. Aquí es donde se muestran los datos y se gestionan las interacciones del usuario, y suele implementarse en HTML, CSS y JavaScript.
 
-2. **Capa de Lógica de Negocio**: Procesa las reglas de negocio y la lógica de la aplicación. Generalmente se implementa en un lenguaje de programación como Java, PHP o Python.
+2. **Capa de Lógica de Negocio**: Aquí se procesan las reglas de negocio y la lógica de la aplicación, usualmente en un lenguaje de programación como Java, PHP o Python.
 
-3. **Capa de Datos**: Gestiona y almacena la información en una base de datos, como MySQL o SQL Server.
+3. **Capa de Datos**: Esta capa maneja y almacena la información de la aplicación, usando una base de datos como MySQL o SQL Server.
 
 ---
 
 ## Plataformas Web: LAMP y WISA
 
-Las plataformas web son entornos de software utilizados para desarrollar y ejecutar sitios web. Dos de las plataformas más populares son:
+Las plataformas web son entornos de software que utilizo para desarrollar y ejecutar sitios web. Aquí describo dos de las plataformas más comunes:
 
-- **LAMP**: Compuesto por Linux, Apache, MySQL y PHP. Es una pila de software open-source que se usa comúnmente para alojar sitios y aplicaciones web dinámicas en servidores Linux.
+- **LAMP**: Es una pila de software open-source que incluye Linux, Apache, MySQL y PHP. Es una configuración común para alojar sitios y aplicaciones web dinámicas en servidores Linux.
 
-- **WISA**: Compone una pila de software que incluye Windows, IIS (Internet Information Services), SQL Server y ASP.NET. Es una plataforma de Microsoft, generalmente utilizada para aplicaciones empresariales en servidores Windows.
+- **WISA**: Esta es una pila de software que incluye Windows, IIS (Internet Information Services), SQL Server y ASP.NET. Es la plataforma de Microsoft y generalmente se usa para aplicaciones empresariales en servidores Windows.
 
 ---
 
 ## Configuración del Servidor Web Apache y Servidor de Aplicaciones Tomcat en Ubuntu 10.04 LTS
 
 ### Requisitos Previos
-Antes de comenzar, asegúrate de que tu máquina con Ubuntu 10.04 LTS tiene una configuración de red activa y acceso a Internet. Además, necesitas tener privilegios de `root`.
+
+Antes de empezar, me aseguro de que mi máquina con Ubuntu 10.04 LTS tenga una configuración de red activa y acceso a Internet. Además, necesito tener privilegios de `root`.
 
 ### Paso 1: Instalación de Apache
 
@@ -45,11 +46,11 @@ Antes de comenzar, asegúrate de que tu máquina con Ubuntu 10.04 LTS tiene una 
     ```bash
     service apache2 status
     ```
-    Deberías ver un mensaje que indique que el servicio Apache está activo.
+    Esto debería mostrar que el servicio Apache está activo.
 
 2. **Comprobar el servidor Apache desde el navegador**:
-    - Abre tu navegador y visita `http://localhost/` o `http://<tu-ip>`.
-    - Deberías ver la página de inicio de Apache si está funcionando correctamente.
+    - Abro mi navegador y visito `http://localhost/` o `http://<mi-ip>`.
+    - Debería ver la página de inicio de Apache si está funcionando correctamente.
 
 ### Paso 3: Cambiar el Puerto de Apache al Puerto 82
 
@@ -59,13 +60,13 @@ Antes de comenzar, asegúrate de que tu máquina con Ubuntu 10.04 LTS tiene una 
     ```
 
 2. **Modificar el puerto de escucha**:
-    - Busca la línea que dice `Listen 80` y cámbiala a `Listen 82`.
+    - Busco la línea que dice `Listen 80` y la cambio a `Listen 82`.
 
 3. **Modificar el archivo de configuración del sitio predeterminado**:
     ```bash
     nano /etc/apache2/sites-available/000-default.conf
     ```
-    - Cambia `<VirtualHost *:80>` a `<VirtualHost *:82>`.
+    - Cambio `<VirtualHost *:80>` a `<VirtualHost *:82>`.
 
 4. **Reiniciar Apache para aplicar los cambios**:
     ```bash
@@ -73,7 +74,7 @@ Antes de comenzar, asegúrate de que tu máquina con Ubuntu 10.04 LTS tiene una 
     ```
 
 5. **Probar la configuración en el navegador**:
-    - En el navegador, visita `http://localhost:82/` o `http://<tu-ip>:82` para confirmar que Apache está funcionando en el puerto 82.
+    - En el navegador, visito `http://localhost:82/` o `http://<mi-ip>:82` para confirmar que Apache está funcionando en el puerto 82.
 
 ### Paso 4: Instalación de Tomcat
 
@@ -83,7 +84,7 @@ Antes de comenzar, asegúrate de que tu máquina con Ubuntu 10.04 LTS tiene una 
     ```
 
 2. **Descargar e instalar Tomcat**:
-    - Descarga Tomcat desde el sitio oficial o utiliza el siguiente comando para instalarlo:
+    - Descargo Tomcat desde el sitio oficial o utilizo el siguiente comando para instalarlo:
     ```bash
     apt-get install tomcat7 -y
     ```
@@ -94,4 +95,4 @@ Antes de comenzar, asegúrate de que tu máquina con Ubuntu 10.04 LTS tiene una 
     ```
 
 4. **Verificar que Tomcat está funcionando**:
-    - Visita `http://localhost:8080/` en tu navegador para ver la página de inicio de Tomcat.
+    - Visito `http://localhost:8080/` en el navegador para ver la página de inicio de Tomcat
