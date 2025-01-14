@@ -63,9 +63,9 @@ mysql -u developer -p
 
 Para instalar PHP 8.3 y algunos módulos comunes, ejecuta el siguiente comando:
 ```bash
-sudo apt install php7.4 libapache2-mod-php7.4 php7.4-mysql php-common php7.4-cli php7.4-common php7.4-json php7.4-opcache php7.4-readline
+sudo apt install php8.3 libapache2-mod-php8.3 php8.3-mysql php-common php8.3-cli php8.3-common php8.3-json php8.3-opcache php8.3-readline
 ```
-Ahora, activamos el módulo Apache para PHP 7.4 y reiniciamos Apache:
+Ahora, activamos el módulo Apache para PHP 8.3 y reiniciamos Apache:
 ```bash
 sudo a2enmod php8.3
 sudo systemctl restart apache2
